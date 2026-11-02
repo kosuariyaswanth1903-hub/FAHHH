@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;--bg:#0b1220;--panel:#111d30;--muted:#91a1b8;--cyan:#74e5dc;--line:rgba(174,205,225,.14)}
+html,body{margin:0;min-height:100%;background:radial-gradient(ellipse at 50% 0%,#1a2d43 0,#0b1220 58%);color:#f3f7fb;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{min-height:100svh;display:flex;justify-content:center;overscroll-behavior:none}
+.shell{width:min(100%,620px);padding:calc(18px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:16px}
+.topbar{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}.brand-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#a1fff0,#39b9b3);color:#09232a;font-weight:1000;font-size:23px;box-shadow:0 7px 24px #4be0cb35}
+.brand strong{display:block;font-size:16px;letter-spacing:3px}.brand small{display:block;color:#8ea2b8;font-size:8px;letter-spacing:2px;margin-top:2px}
+.best{font-size:10px;letter-spacing:1.5px;color:#91a1b8}.best b{color:#e9fffb;font-size:16px;margin-left:7px}
+.game-card{background:linear-gradient(155deg,rgba(24,39,59,.96),rgba(13,24,39,.98));border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:0 22px 70px #0006}
+.game-heading{display:flex;justify-content:space-between;align-items:center;padding:4px 5px 13px}
+.eyebrow{font-size:9px;letter-spacing:2px;color:var(--cyan);font-weight:800}
+h1{font-size:17px;letter-spacing:2.2px;margin:4px 0 0}
+.live-score{text-align:right}.live-score span{display:block;color:#8fa1b8;font-size:9px;letter-spacing:1.8px}.live-score b{font-size:27px;line-height:1.1}
+.stage-wrap{position:relative;width:100%;overflow:hidden;border-radius:16px;background:#b8e6df;aspect-ratio:420/680;touch-action:none}
+canvas{display:block;width:100%;height:100%;touch-action:none}
+.overlay{position:absolute;inset:0;display:grid;place-items:center;padding:20px;background:linear-gradient(180deg,rgba(5,15,27,.18),rgba(5,15,27,.56))}
+.hidden{display:none}
+.overlay-panel{width:min(100%,290px);text-align:center;padding:27px 20px 23px;border-radius:20px;border:1px solid #d7fff32c;background:rgba(10,24,38,.88);box-shadow:0 18px 50px #06121e66;backdrop-filter:blur(12px)}
+.overlay-panel h2{font-size:37px;letter-spacing:1px;margin:7px 0 8px;line-height:1}
+.overlay-panel p{font-size:13px;line-height:1.6;color:#c0ccda;margin:0 0 19px}
+.primary{width:100%;border:0;border-radius:12px;padding:14px 16px;background:linear-gradient(100deg,#a0fff0,#5bd8cc);color:#09232a;font-weight:900;letter-spacing:1.4px;font-size:11px;cursor:pointer;box-shadow:0 8px 24px #4be0cb35}
+.primary span{font-size:17px;margin-left:8px;vertical-align:-1px}
+.hint{display:block;color:#8197ad;font-size:8px;letter-spacing:1.6px;margin-top:14px}
+.result-panel h2{font-size:39px}.result-label{margin:12px 0 0!important;font-size:9px!important;letter-spacing:2px;color:#91a7bb!important}.final-score{font-size:64px;line-height:1.05;font-weight:950;color:#9affed;margin:2px 0 8px;text-shadow:0 0 28px #5be2d766}.record-message{margin-bottom:18px!important}
+.game-footer{display:flex;justify-content:space-between;padding:12px 5px 2px;color:#8094aa;font-size:8px;letter-spacing:1.4px}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#65e5bb;margin-right:6px;box-shadow:0 0 10px #65e5bb}
+.controls{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;color:#91a2b7;font-size:8px;letter-spacing:1px}
+kbd{font:inherit;color:#e6f6f3;border:1px solid #53677b;border-bottom-width:2px;border-radius:5px;padding:4px 6px;margin-right:4px}
+.credit{text-align:center;color:#71869d;font-size:10px;letter-spacing:.5px;margin:0}
+@media(min-width:600px){.shell{padding-top:28px}.stage-wrap{max-height:680px}.game-card{padding:17px}}
+@media(max-height:760px) and (max-width:600px){.shell{gap:10px;padding-top:10px}.game-card{padding:10px}.game-heading{padding-bottom:8px}.controls{gap:9px}.credit{font-size:9px}}
+button:focus-visible{outline:3px solid white;outline-offset:3px}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="FAHH — a tiny campus challenge starring Charan Raj.">
+  <title>FAHH — Charan Raj</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">F</span><div><strong>FAHH</strong><small>THE CAMPUS CHALLENGE</small></div></div>
+      <div class="best">BEST <b id="bestScore">0</b></div>
+    </header>
+
+    <section class="game-card" aria-label="FAHH game">
+      <div class="game-heading">
+        <div><span class="eyebrow">PLAYER ONE</span><h1>CHARAN RAJ</h1></div>
+        <div class="live-score"><span>SCORE</span><b id="score">0</b></div>
+      </div>
+      <div class="stage-wrap">
+        <canvas id="game" width="420" height="680" aria-label="Game area. Tap or press Space to flap."></canvas>
+        <div class="overlay" id="startOverlay">
+          <div class="overlay-panel">
+            <span class="eyebrow">READY?</span>
+            <h2>LET'S FLY.</h2>
+            <p>Tap to rise. Dodge the books.<br>Don't get caught.</p>
+            <button id="startBtn" class="primary">START GAME <span>↗</span></button>
+            <small class="hint">TAP / SPACE TO PLAY</small>
+          </div>
+        </div>
+        <div class="overlay hidden" id="resultOverlay">
+          <div class="overlay-panel result-panel">
+            <span class="eyebrow">RUN COMPLETE</span>
+            <h2>FAHH!</h2>
+            <p class="result-label">YOUR SCORE</p>
+            <div class="final-score" id="finalScore">0</div>
+            <p id="recordMessage" class="record-message">One more round?</p>
+            <button id="restartBtn" class="primary">PLAY AGAIN <span>↻</span></button>
+            <small class="hint">TAP / SPACE TO RESTART</small>
+          </div>
+        </div>
+      </div>
+      <footer class="game-footer"><span><i class="dot"></i> LIVE RUN</span><span>BUILT FOR THE LEGEND</span></footer>
+    </section>
+    <div class="controls"><span> <kbd>SPACE</kbd> FLAP</span><span> <kbd>TOUCH</kbd> FLAP</span><span>PASS BOOKS = +1</span></div>
+    <p class="credit">A little campus chaos. A lot of Charan Raj.</p>
+  </main>
+  <audio id="tapAudio" src="audio/tap-flap.mp3" preload="auto"></audio>
+  <audio id="overAudio" src="audio/game-over-voice.mp3" preload="auto"></audio>
+  <script src="game.js"></script>
+</body>
+</html>
